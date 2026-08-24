@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ПЛЕНКИН — монтаж архитектурных плёнок в Москве и МО: солнцезащитные, атермальные, декоративные, противоосколочные К4–Р4А, защита от БПЛА. С 2009 года.">
+<meta name="keywords" content="архитектурные плёнки, монтаж плёнки на окна, атермальная плёнка, противоосколочная плёнка, тонировка окон Москва, защита от БПЛА">
+<title>ПЛЕНКИН — Архитектурные плёнки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0c10;--surface:#12141c;--border:rgba(255,255,255,.08);--text:#f4f5f7;--muted:#9aa3b5;
+  --gold:#e8c547;--gold2:#f0d47a;--radius:22px;--shadow:0 20px 50px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(11,12,16,.75);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font-weight:800;letter-spacing:.12em;font-size:14px;color:var(--gold)}
+.nav-links{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--gold);color:#111;font-weight:700;font-size:13px;padding:10px 16px;border-radius:999px}
+.section{padding:56px 0}
+.section-head{margin-bottom:22px}
+.section-head h2{font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.03em}
+.section-head p{color:var(--muted);margin-top:8px;max-width:52ch}
+.bento{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
+.tile{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;position:relative;overflow:hidden;min-height:120px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.tile:hover{transform:translateY(-2px);border-color:rgba(232,197,71,.28);box-shadow:var(--shadow)}
+.tile-lg{padding:28px}
+.tile h3{font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.tile p{color:var(--muted);font-size:14px}
+.tile .tag{display:inline-flex;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.tile .price{margin-top:14px;font-size:20px;font-weight:800;color:var(--gold2)}
+.tile .price span{font-size:13px;font-weight:500;color:var(--muted)}
+.tile-metric{display:flex;flex-direction:column;justify-content:space-between}
+.metric-num{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.04em;color:var(--gold)}
+.metric-label{color:var(--muted);font-size:13px;margin-top:6px}
+.span-8{grid-column:span 8}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-3{grid-column:span 3}.span-5{grid-column:span 5}.span-7{grid-column:span 7}.span-12{grid-column:span 12}
+.hero-title{font-size:clamp(32px,5vw,56px);font-weight:800;letter-spacing:-.045em;line-height:1.05;margin:8px 0 16px}
+.hero-title em{font-style:normal;color:var(--gold)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent}
+.btn-primary{background:var(--gold);color:#111}.btn-ghost{border-color:var(--border);color:var(--text);background:transparent}
+.visual-tile{background:radial-gradient(circle at 20% 20%,rgba(232,197,71,.18),transparent 40%),radial-gradient(circle at 80% 80%,rgba(61,139,253,.15),transparent 42%),linear-gradient(160deg,#151822,#0e1016);display:flex;align-items:flex-end;min-height:280px}
+.visual-tile .caption{position:relative;z-index:1;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:16px;padding:14px 16px;width:100%}
+.glass-orb{position:absolute;inset:auto auto 30% 20%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),rgba(232,197,71,.15) 40%,transparent 70%);filter:blur(2px);pointer-events:none}
+.glass-panel{position:absolute;right:10%;top:18%;width:42%;height:55%;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 60px rgba(0,0,0,.35);transform:perspective(600px) rotateY(-12deg) rotateX(6deg)}
+.svc-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(232,197,71,.12);color:var(--gold);font-size:18px;margin-bottom:14px}
+.step-num{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.1em;margin-bottom:10px}
+.form-grid{display:grid;gap:12px}
+.form-grid input,.form-grid textarea,.form-grid select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:14px;color:var(--text);font:inherit;outline:none}
+.form-grid input:focus,.form-grid textarea:focus,.form-grid select:focus{border-color:rgba(232,197,71,.45)}
+.form-grid textarea{min-height:100px;resize:vertical}
+.footer{border-top:1px solid var(--border);padding:28px 0 40px;color:var(--muted);font-size:13px}
+.footer-row{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+@media (prefers-reduced-motion:no-preference){
+  .tile{animation:rise .6s ease both}
+  .bento .tile:nth-child(1){animation-delay:.02s}.bento .tile:nth-child(2){animation-delay:.06s}
+  .bento .tile:nth-child(3){animation-delay:.1s}.bento .tile:nth-child(4){animation-delay:.14s}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+@media (max-width:960px){
+  .span-8,.span-7,.span-6,.span-5,.span-4,.span-3{grid-column:span 12}
+  .nav-links{display:none}.bento{gap:12px}
+}
+@media (min-width:961px) and (max-width:1100px){.span-3{grid-column:span 4}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">ПЛЕНКИН</a>
+    <nav class="nav-links">
+      <a href="#services">Направления</a>
+      <a href="#who">Для кого</a>
+      <a href="#why">Почему мы</a>
+      <a href="#process">Этапы</a>
+      <a href="#classes">Классы</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Заявка</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="section">
+    <div class="wrap">
+      <div class="bento">
+        <article class="tile tile-lg span-8">
+          <div class="tag">Москва и МО · с 2009</div>
+          <h1 class="hero-title">Защищаем окна —<br><em>защищаем людей</em></h1>
+          <p style="max-width:46ch;color:var(--muted);font-size:16px">
+            Монтаж архитектурных плёнок: солнцезащита, атермальные, декоративные,
+            противоосколочные К4–Р4А и защита от БПЛА. Документы по ГОСТ, гарантия до 15 лет.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Бесплатный замер</a>
+            <a class="btn btn-ghost" href="#services">Смотреть направления</a>
+          </div>
+        </article>
+        <article class="tile visual-tile span-4">
+          <div class="glass-orb" aria-hidden="true"></div>
+          <div class="glass-panel" aria-hidden="true"></div>
+          <div class="caption">
+            <strong style="display:block;margin-bottom:4px">Плёнка на стекло</strong>
+            <span style="color:var(--muted);font-size:13px">Без замены остекления · чисто · по ГОСТ</span>
+          </div>
+        </article>
+        <article class="tile tile-metric span-3"><div class="metric-num">5 200+</div><div class="metric-label">м² остекления по ГОСТ</div></article>
+        <article class="tile tile-metric span-3"><div class="metric-num">200+</div><div class="metric-label">объектов в Москве и МО</div></article>
+        <article class="tile tile-metric span-3"><div class="metric-num">2009</div><div class="metric-label">работаем с 2009 года</div></article>
+        <article class="tile tile-metric span-3"><div class="metric-num">24/7</div><div class="metric-label">поддержка и консультации</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Направления работ</h2>
+        <p>Только нужное по каждому типу плёнки — без перегруза. Подбор под задачу, бюджет и нормативы.</p>
+      </div>
+      <div class="bento">
+        <article class="tile span-6">
+          <div class="svc-icon">🛡</div>
+          <h3>Противоосколочные и бронеплёнки</h3>
+          <p>Классы К4–Р4А по ГОСТ 30826-2014: осколки, взлом, БПЛА. Школы, ТЦ, банки, госучреждения.</p>
+          <div class="price">от 1 100 ₽ <span>/ м²</span></div>
+        </article>
+        <article class="tile span-6">
+          <div class="svc-icon">☀</div>
+          <h3>Солнцезащитные и атермальные</h3>
+          <p>Зеркальные, атермальные, керамические. Снижение тепловой нагрузки до 80% — офисы, ЖК, балконы.</p>
+          <div class="price">от 650 ₽ <span>/ м²</span></div>
+        </article>
+        <article class="tile span-4">
+          <div class="svc-icon">✨</div>
+          <h3>Декоративные</h3>
+          <p>Матирование, витражи, дихроика. Зонирование open space без замены стекла.</p>
+          <div class="price">от 650 ₽ <span>/ м²</span></div>
+        </article>
+        <article class="tile span-4">
+          <div class="svc-icon">🖨</div>
+          <h3>Фотопечать</h3>
+          <p>UV / сольвент / латекс. Брендирование витрин и навигация в ТЦ.</p>
+          <div class="price">от 1 250 ₽ <span>/ м²</span></div>
+        </article>
+        <article class="tile span-4">
+          <div class="svc-icon">⚡</div>
+          <h3>Смарт и спецрешения</h3>
+          <p>PDLC, UV-музейные, антиграффити, экранирующие плёнки.</p>
+          <div class="price">от 2 300 ₽ <span>/ м²</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="who">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Для кого работаем</h2>
+        <p>Поставка и монтаж для объектов любой сложности — от квартиры до госзакупки.</p>
+      </div>
+      <div class="bento">
+        <article class="tile span-4"><h3>Школы и детсады</h3><p>К4 по требованиям МЧС. Полный пакет документов для приёмки.</p></article>
+        <article class="tile span-4"><h3>Офисы и БЦ</h3><p>Солнцезащита, матирование, брендирование. Монтаж в выходные.</p></article>
+        <article class="tile span-4"><h3>ТЦ и ритейл</h3><p>Витрины, One Way Vision, антивандальная защита.</p></article>
+        <article class="tile span-4"><h3>Банки и ювелирные</h3><p>Р3А–Р4А. Сертификаты для страховых компаний.</p></article>
+        <article class="tile span-4"><h3>Госучреждения</h3><p>44-ФЗ и 223-ФЗ. Типовые формулировки для ТЗ.</p></article>
+        <article class="tile span-4"><h3>Частные клиенты</h3><p>Балконы, защита от осколков, декор и приватность.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Почему ПЛЕНКИН</h2>
+        <p>Документальное подтверждение классов защиты, а не «на словах».</p>
+      </div>
+      <div class="bento">
+        <article class="tile span-3"><div class="step-num">01</div><h3>Сертификаты ГОСТ</h3><p>ГОСТ 30826-2014 и ГОСТ Р 51136-2008 — протоколы по запросу.</p></article>
+        <article class="tile span-3"><div class="step-num">02</div><h3>Гарантия до 15 лет</h3><p>На материал — от производителя. На монтаж — 2 года.</p></article>
+        <article class="tile span-3"><div class="step-num">03</div><h3>Бесплатный замер</h3><p>Выезд по Москве и МО за 1–2 дня. Смета на объекте.</p></article>
+        <article class="tile span-3"><div class="step-num">04</div><h3>Госзакупки</h3><p>Полный пакет: договор, акт, гарантия, сертификаты.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="classes">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Классы защиты</h2>
+        <p>Шкала по ГОСТ 30826-2014 — от базовой противоосколочности до банковской защиты.</p>
+      </div>
+      <div class="bento">
+        <article class="tile span-3"><div class="tag">К4</div><h3>Осколки</h3><p>Жильё, школы, торговые залы</p><div class="price">от 1 100 ₽</div></article>
+        <article class="tile span-3"><div class="tag">Р1А</div><h3>Удар</h3><p>Офисы, витрины спокойных районов</p><div class="price">от 1 500 ₽</div></article>
+        <article class="tile span-3"><div class="tag">Р2А</div><h3>А1</h3><p>ТЦ с сигнализацией, офисы</p><div class="price">от 2 200 ₽</div></article>
+        <article class="tile span-3"><div class="tag">Р3А–Р4А</div><h3>А2 / А3</h3><p>Банки, музеи, спецобъекты</p><div class="price">от 3 400 ₽</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Как мы работаем</h2>
+        <p>Прозрачный процесс от заявки до гарантийного обслуживания.</p>
+      </div>
+      <div class="bento">
+        <article class="tile span-4"><div class="step-num">01 · Заявка</div><h3>Звонок или форма</h3><p>Предварительный расчёт по размерам и фото — за 15 минут.</p></article>
+        <article class="tile span-4"><div class="step-num">02 · Замер</div><h3>Выезд специалиста</h3><p>Точные размеры, подбор плёнки, смета на объекте.</p></article>
+        <article class="tile span-4"><div class="step-num">03 · Договор</div><h3>Документы</h3><p>Ваша форма или наш шаблон. Понятные сроки и объём.</p></article>
+        <article class="tile span-4"><div class="step-num">04 · Монтаж</div><h3>Установка</h3><p>От 20 минут на окно. Типичный объект — 1–3 дня.</p></article>
+        <article class="tile span-4"><div class="step-num">05 · Приёмка</div><h3>Акт и оплата</h3><p>Сдача объекта, гарантийный талон, закрывающие документы.</p></article>
+        <article class="tile span-4"><div class="step-num">06 · Гарантия</div><h3>До 15 лет</h3><p>Отслоения, выгорание, пузырьки, потеря адгезии — под покрытием.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cases">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Кейсы</h2>
+        <p>Решения под конкретную задачу — безопасность, климат, бренд.</p>
+      </div>
+      <div class="bento">
+        <article class="tile span-4"><div class="tag">К4 · 420 м²</div><h3>Школа «Гармония»</h3><p>Противоосколочная плёнка на все окна. Акт для МЧС без замечаний.</p></article>
+        <article class="tile span-4"><div class="tag">Р3А · 450 м²</div><h3>Ювелирный салон</h3><p>Бронеплёнка на витрины + антиграффити. Страховая приняла без допов.</p></article>
+        <article class="tile span-4"><div class="tag">IR-cut · 1 200 м²</div><h3>ЖК «ЭкоЛюкс»</h3><p>Атермальная плёнка на фасад. Снижение затрат на кондиционирование до 80%.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="bento">
+        <article class="tile tile-lg span-7">
+          <div class="tag">Связаться</div>
+          <h2 style="font-size:clamp(26px,3vw,34px);font-weight:800;letter-spacing:-.03em;margin-bottom:10px">Заявка на замер или расчёт</h2>
+          <p style="color:var(--muted);margin-bottom:18px">Опишите объект — перезвоним и подскажем класс плёнки и ориентир по бюджету.</p>
+          <form class="form-grid" onsubmit="event.preventDefault();alert('Спасибо! Мы свяжемся с вами. Или позвоните: +7 985 780-13-75');">
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="tel" name="phone" placeholder="Телефон *" required>
+            <select name="type">
+              <option value="">Тип задачи</option>
+              <option>Солнцезащита / атермальная</option>
+              <option>Противоосколочная / БПЛА</option>
+              <option>Декор / матирование</option>
+              <option>Фотопечать / брендирование</option>
+              <option>Другое</option>
+            </select>
+            <textarea name="msg" placeholder="Адрес, площадь, комментарий"></textarea>
+            <button class="btn btn-primary" type="submit" style="border:0;cursor:pointer">Отправить заявку</button>
+          </form>
+        </article>
+        <article class="tile span-5" style="display:flex;flex-direction:column;justify-content:space-between;gap:18px">
+          <div>
+            <div class="tag">Контакты</div>
+            <h3 style="font-size:22px;margin-bottom:12px">ПЛЕНКИН</h3>
+            <p style="margin-bottom:8px"><a href="tel:+79857801375" style="color:var(--gold);font-weight:700;font-size:18px">+7 985 780-13-75</a></p>
+            <p style="color:var(--muted)">Москва и Московская область</p>
+            <p style="color:var(--muted);margin-top:6px">www.plenkinaokna.ru</p>
+          </div>
+          <div style="border-top:1px solid var(--border);padding-top:16px">
+            <p style="font-size:13px;color:var(--muted)">Бесплатный выезд замерщика · сертификаты ГОСТ · гарантия до 15 лет</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <span>© ПЛЕНКИН · Архитектурные плёнки</span>
+    <span>Монтаж · поставка · сервис · Москва и МО</span>
+  </div>
+</footer>
+</body>
+</html>
