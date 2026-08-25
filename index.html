@@ -2,10 +2,50 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=https://plenkina-bento-ars15kh6i-romans-projects-b0ef5e65.vercel.app/">
-<title>ПЛЕНКИН — перенаправление</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ПЛЕНКИН — монтаж архитектурных плёнок</title>
+<meta name="description" content="Монтаж архитектурных плёнок в Москве: К4–Р4А, атермальные, декор. Работаем с 2009 года.">
+<style>
+  body{margin:0;background:#0b0d12;color:#e8eaef;font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}
+  .boot{opacity:.7;font-size:14px}
+</style>
 </head>
 <body>
-<p><a href="https://plenkina-bento-ars15kh6i-romans-projects-b0ef5e65.vercel.app/">Открыть сайт ПЛЕНКИН</a></p>
+<p class="boot">Загрузка…</p>
+<script>
+(function(){
+  var SRC = "https://plenkina-bento-ars15kh6i-romans-projects-b0ef5e65.vercel.app/";
+  var CSS = [
+    ".visual-tile{isolation:isolate!important}",
+    ".visual-tile::before{inset:0!important;",
+    "background:radial-gradient(ellipse 75% 60% at 20% 25%,rgba(232,197,71,.55),transparent 58%),",
+    "radial-gradient(ellipse 60% 55% at 80% 75%,rgba(61,139,253,.40),transparent 60%),",
+    "radial-gradient(circle at 50% 45%,rgba(255,255,255,.06),transparent 50%)!important;",
+    "animation:vtGlowStrong 6s ease-in-out infinite alternate!important}",
+    ".visual-tile::after{top:-40%!important;left:-50%!important;width:70%!important;height:180%!important;",
+    "inset:auto!important;",
+    "background:linear-gradient(105deg,transparent 15%,rgba(255,255,255,.28) 42%,rgba(232,197,71,.35) 50%,rgba(255,255,255,.18) 58%,transparent 78%)!important;",
+    "background-size:auto!important;transform:rotate(14deg)!important;",
+    "animation:vtSheenStrong 4.5s ease-in-out infinite!important;mix-blend-mode:soft-light!important}",
+    "@keyframes vtGlowStrong{0%{opacity:.65;transform:scale(1) translate(0,0)}100%{opacity:1;transform:scale(1.12) translate(3%,-2%)}}",
+    "@keyframes vtSheenStrong{0%{transform:translateX(0) rotate(14deg);opacity:.35}40%{opacity:.85}100%{transform:translateX(280%) rotate(14deg);opacity:.25}}",
+    "@media(prefers-reduced-motion:reduce){.visual-tile::before,.visual-tile::after{animation:none!important}}"
+  ].join("");
+
+  fetch(SRC, {mode:"cors", credentials:"omit"})
+    .then(function(r){ if(!r.ok) throw new Error("HTTP "+r.status); return r.text(); })
+    .then(function(html){
+      var base = SRC.replace(/\/$/, "");
+      html = html.replace(/<head>/i, "<head><base href=\""+base+"/\">");
+      html = html.replace(/<\/head>/i, "<style id=\"motion-boost\">"+CSS+"</style></head>");
+      document.open();
+      document.write(html);
+      document.close();
+    })
+    .catch(function(err){
+      document.body.innerHTML = "<p style=\"padding:24px;max-width:40ch;line-height:1.5\">Не удалось загрузить страницу. <a href=\""+SRC+"\" style=\"color:#e8c547\">Открыть напрямую</a><br><small style=\"opacity:.6\">"+String(err)+"</small></p>";
+    });
+})();
+</script>
 </body>
 </html>
