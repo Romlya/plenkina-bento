@@ -76,14 +76,19 @@ a{color:inherit;text-decoration:none}
 .step-num{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.1em;margin-bottom:10px}
 .link-more{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--gold)}
 .form-grid{display:grid;gap:12px}
-.form-grid input,.form-grid textarea,.form-grid select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:14px;color:var(--text);font:inherit;outline:none}
-.form-grid input:focus,.form-grid textarea:focus,.form-grid select:focus{border-color:rgba(232,197,71,.45)}
+.form-grid input:not([type="checkbox"]),
+.form-grid textarea,
+.form-grid select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:14px;color:var(--text);font:inherit;outline:none}
+.form-grid input:not([type="checkbox"]):focus,
+.form-grid textarea:focus,
+.form-grid select:focus{border-color:rgba(232,197,71,.45)}
 .form-grid textarea{min-height:100px;resize:vertical}
-.form-hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
+.form-hint{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.45}
 .form-ok{display:none;padding:16px;border-radius:14px;background:rgba(61,214,140,.12);border:1px solid rgba(61,214,140,.35);color:#b8f0d2;font-size:14px;margin-top:12px}
-.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden}
-.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);line-height:1.45}
-.consent input{margin-top:3px;flex-shrink:0}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0;overflow:hidden;pointer-events:none}
+.consent{display:grid;grid-template-columns:20px 1fr;column-gap:12px;align-items:start;font-size:13px;color:var(--muted);line-height:1.45;padding:12px 14px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02);cursor:pointer}
+.consent input[type="checkbox"]{width:18px;height:18px;margin:1px 0 0;accent-color:var(--gold);flex-shrink:0;cursor:pointer}
+.consent a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
 .calc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .calc-result{margin-top:16px;padding:16px;border-radius:16px;background:rgba(232,197,71,.08);border:1px solid rgba(232,197,71,.25)}
 .calc-result strong{display:block;font-size:28px;font-weight:800;color:var(--gold2)}
@@ -309,7 +314,10 @@ a{color:inherit;text-decoration:none}
 </select>
 <textarea name="msg" id="fMsg" placeholder="Адрес объекта, площадь м², комментарий" maxlength="2000"></textarea>
 <div class="hp" aria-hidden="true"><label>Не заполнять<input type="text" name="company" id="fHp" tabindex="-1" autocomplete="off"></label></div>
-<label class="consent"><input type="checkbox" id="fConsent" required> Согласен(на) на обработку персональных данных в соответствии с <a href="privacy.html" style="color:var(--gold)">политикой конфиденциальности</a></label>
+<label class="consent" for="fConsent">
+<input type="checkbox" id="fConsent" name="consent" required>
+<span>Согласен(на) на обработку персональных данных в соответствии с <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a></span>
+</label>
 <button class="btn btn-primary" type="submit" style="border:0" id="fSubmit">Отправить заявку</button>
 <p class="form-hint">Данные используем только для связи по вашей заявке. Не передаём третьим лицам в маркетинговых целях.</p>
 <div class="form-ok" id="formOk" role="status">Спасибо! Заявка принята. Мы свяжемся с вами. Телефон: <a href="tel:+79857801375" style="color:var(--gold)">+7 985 780-13-75</a>, почта: <a href="mailto:plenkininfo@yandex.ru" style="color:var(--gold)">plenkininfo@yandex.ru</a></div>
