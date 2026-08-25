@@ -64,8 +64,14 @@ a{color:inherit;text-decoration:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:0 18px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer;font-family:inherit}
 .btn-primary{background:var(--gold);color:#111}.btn-ghost{border-color:var(--border);color:var(--text);background:transparent}
 .btn-max{background:var(--max);border-color:var(--max);color:#fff}
-.visual-tile{background:radial-gradient(circle at 20% 20%,rgba(232,197,71,.18),transparent 40%),radial-gradient(circle at 80% 80%,rgba(61,139,253,.15),transparent 42%),linear-gradient(160deg,#151822,#0e1016);display:flex;align-items:flex-end;min-height:280px}
+.visual-tile{background:linear-gradient(160deg,#151822,#0e1016);display:flex;align-items:flex-end;min-height:280px;overflow:hidden}
+.visual-tile::before,.visual-tile::after{content:"";position:absolute;inset:0;pointer-events:none}
+.visual-tile::before{background:radial-gradient(ellipse 55% 45% at 22% 28%,rgba(232,197,71,.16),transparent 70%),radial-gradient(ellipse 50% 40% at 78% 72%,rgba(61,139,253,.12),transparent 70%);animation:vtGlow 12s ease-in-out infinite alternate}
+.visual-tile::after{background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.03) 42%,rgba(232,197,71,.06) 50%,rgba(255,255,255,.03) 58%,transparent 100%);background-size:220% 100%;animation:vtSheen 14s ease-in-out infinite}
 .visual-tile .caption{position:relative;z-index:1;background:rgba(0,0,0,.35);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:16px;padding:14px 16px;width:100%}
+@keyframes vtGlow{0%{opacity:.85;transform:scale(1) translate(0,0)}100%{opacity:1;transform:scale(1.06) translate(2%,-1%)}}
+@keyframes vtSheen{0%{background-position:120% 0}100%{background-position:-20% 0}}
+@media(prefers-reduced-motion:reduce){.visual-tile::before,.visual-tile::after{animation:none}}
 .svc-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(232,197,71,.12);color:var(--gold);font-size:18px;margin-bottom:14px}
 .step-num{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.1em;margin-bottom:10px}
 .link-more{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--gold)}
@@ -153,7 +159,7 @@ a{color:inherit;text-decoration:none}
 <article class="tile span-6">
 <div class="svc-icon" aria-hidden="true">🛡</div>
 <h3>Противоосколочные плёнки К4–Р4А</h3>
-<p>Классы по ГОСТ 30826-2014: при разрушении стекла осколки удерживаются на плёнке. К4 (SB2) — для школ, детсадов, поликлиник. Р1А–Р4А — повышенная ударостойкость для МЧС и банков. Монтаж изнутри, сертификаты и акты.</p>
+<p>Классы по ГОСТ 30826-2014: при разрушении стекла осколки удерживаются на плёнке. К4 (SB2) — для школ, детсадов, поликлиник; Р1А–Р4А — повышенная ударостойкость для МЧС и банков. Усиление существующего остекления без замены окон. Монтаж изнутри, сертификаты и акты.</p>
 <div class="price">от 1 100 ₽ <span>/ м² с монтажом</span></div>
 <a class="link-more" href="uslugi/k4.html">Классы защиты и цены →</a>
 </article>
@@ -164,21 +170,14 @@ a{color:inherit;text-decoration:none}
 <div class="price">от 650 ₽ <span>/ м² с монтажом</span></div>
 <a class="link-more" href="uslugi/atermalnaya.html">Подробнее об атермальных →</a>
 </article>
-<article class="tile span-4">
+<article class="tile span-6">
 <div class="svc-icon" aria-hidden="true">✨</div>
 <h3>Декор и матирование</h3>
 <p>Зонирование open space и переговорных без замены стекла: матирование, градиенты, полосы. Приватность при сохранении света.</p>
 <div class="price">от 650 ₽ <span>/ м²</span></div>
 <a class="link-more" href="uslugi/dekor.html">Варианты декора →</a>
 </article>
-<article class="tile span-4">
-<div class="svc-icon" aria-hidden="true">🛰</div>
-<h3>Защита остекления (удар, осколки)</h3>
-<p>Усиление существующего стекла: удержание осколков при ударе. Не замена бронестекла — доступное усиление по ГОСТ. Актуально для школ, ТЦ, административных зданий.</p>
-<div class="price">от 1 100 ₽ <span>/ м²</span></div>
-<a class="link-more" href="uslugi/bpla.html">Что реально даёт плёнка →</a>
-</article>
-<article class="tile span-4">
+<article class="tile span-6">
 <div class="svc-icon" aria-hidden="true">🖨</div>
 <h3>Фотопечать и смарт-решения</h3>
 <p>Брендирование витрин, One Way Vision, PDLC и специальные плёнки под ТЗ.</p>
