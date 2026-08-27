@@ -11,7 +11,7 @@
         { "key": "X-DNS-Prefetch-Control", "value": "on" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://mc.yandex.ru https://mc.yandex.com; style-src 'self' 'unsafe-inline'; font-src 'self' data: https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru https://mc.yandex.com https://cdn.jsdelivr.net; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:"
         }
       ]
     },
